@@ -11,7 +11,8 @@ import SwiftUI
 struct emotion_diaryApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let vm = DiaryListViewModel(storage: MoodDiaryStorage())
+            DiaryListView(vm: vm)
         }
     }
 }
